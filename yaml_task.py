@@ -9,7 +9,11 @@ To exit, enter blank line.\n\n"
 with open('config.yaml', 'r') as file:
     data = yaml.safe_load(file)
 
-keys = input(text).split()
+keys = input(text)
+if not(keys):
+    print("booba")
+    exit
+keys = keys.split()
 value = data
 key = None
 
