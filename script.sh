@@ -2,6 +2,11 @@
 
 # Получаем имя файла и список функций из аргументов командной строки
 filename=$1
+if [[ ! -f $filename ]]; then
+    echo "No such file '$filename'"
+    exit 1
+fi
+
 shift
 functions=("$@")
 
