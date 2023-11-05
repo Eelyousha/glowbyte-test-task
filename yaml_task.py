@@ -15,8 +15,8 @@ if not(keys):
     exit
 keys = keys.split()
 value = data
-key = None
 
+key = None
 try:
     for key in keys:
             value = value[key]
